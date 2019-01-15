@@ -1,0 +1,17 @@
+ID: source_to_access
+_schema-version: '2.1'
+description: cross container config example - this container is one to access
+version: 0.0.1
+
+modules:
+ - name: db
+   type: hdb
+   path: db
+   requires:
+    - name: hdi_db
+
+resources:
+ - name: hdi_db
+   properties:
+      hdi-container-name: ${service-name}
+   type: com.sap.xs.hdi-container

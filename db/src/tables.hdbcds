@@ -1,0 +1,12 @@
+namespace source_to_access.db;
+
+context tables {
+    entity Customers {
+        key id        : Integer not null;
+            name      : String(100);
+            lifeSpend : Double;
+            newSpend  : Double;
+            income    : Double;
+            loyalty   : Double;
+    };
+};
